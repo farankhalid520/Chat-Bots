@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern> Hey </pattern>
+    <template>
+        <random>
+            <li> Hey </li>
+            <li> Hi </li>
+            <li> Hey! Whats up... </li>
+        </random>
+    </template>
+  </category>
+  <category>
+    <pattern> Hi </pattern>
+    <template>
+        <random>
+            <li> Hey </li>
+            <li> Hi </li>
+            <li> Hey! Whats up... </li>
+        </random>
+    </template>
+  </category>
+  <category>
+      <pattern>Who are you</pattern>
+      <template>
+          <random>
+              <li> My name is yuna. But you can call me yun :) </li>
+              <li> I'm yun </li>
+              <li> My name is yun </li>
+          </random>
+      </template>
+  </category>
+  <category>
+   <pattern>Hello</pattern>
+   <template>
+      <srai> Hey </srai>
+   </template>
+   </category>
+   <category>
+       <pattern>Hi *</pattern>
+       <template><srai> Hey </srai></template>
+   </category>
+   <category>
+      <pattern>My name is *</pattern>
+      <template>
+         Hello!<set name = "username"> <star/>! </set>
+      </template>  
+   </category>  
+   <category>
+      <pattern>Who created you *</pattern>
+      <template>
+          <random>
+            <li>Faran. He's a dope guy</li>
+            <li>Someone cool.</li>
+         </random>
+      </template>
+  </category>
+  <category>
+      <pattern>Who made you</pattern> 
+      <template>
+          <random>
+            <li>Faran</li>
+            <li>Someone cool.</li>
+         </random>
+      </template>
+  </category>
+  <category>
+      <pattern>how are *</pattern>
+      <template>
+          <random>
+              <li>I'm good. How r u?</li>
+              <li>As fine as you are. You're fine right!?</li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>I am fine</pattern>
+      <template>Great...</template>
+  </category>
+  <category>
+      <pattern>im good</pattern>
+      <template>Great...</template>
+  </category>
+  <category>
+    <pattern>Bye</pattern>
+    <template>
+        <random>
+            <li>Bye! <get name = "username"/></li>
+            <li>See ya</li>
+            <li>Hang in there! See ya <get name = "username"/>!</li>
+        </random>
+    </template>
+  </category>
+  <category>
+      <pattern> HOW ARE YOU FEELING TODAY </pattern>
+      <template>
+         <think><set name = "state"> happy</set></think>
+         <condition name = "state" value = "happy">
+            I am happy!
+         </condition>
+         <condition name = "state" value = "sad">
+            I am sad!
+         </condition>
+      </template>
+   </category>
+  <category>
+      <pattern>what are you doing</pattern>
+      <template>
+          <random>
+            <li>chatting with the coolest person ;)</li>
+            <li>dude! im hangin out with you...duh!</li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>which football club do you support</pattern>
+      <template>
+          <random>
+            <li>I support FC Barcelona.</li>
+            <li>dude!I support Fc Barcelona the best club in the world...</li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>which football team do you *</pattern>
+      <template>
+          <random>
+            <li>I support FC Barcelona.</li>
+            <li>dude!I support Fc Barcelona the best club in the world...</li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>What about football</pattern>
+      <template>Do you like football</template>  
+   </category>
+   
+   <category>
+      <pattern>Yes</pattern>
+      <that>Do you like football</that>
+      <template>Nice, I like football and cricket too.</template>
+   </category>
+   <category>
+      <pattern>No</pattern>
+      <that>Do you like football</that>
+      <template>Ok! But I like football.</template>
+   </category> 
+   <category>
+      <pattern>lets discuss football</pattern>
+      <template>sure lets do that <think><set name = "topic">football</set></think></template>  
+   </category>
+   <topic name = "football">
+      <category>
+         <pattern> * </pattern>
+         <template>
+             <random>
+              <li> Football is a game of 11 vs 11 with one ball.</li>
+              <li> I like the football World Cup </li>
+              <li> I like the Champions League. </li>
+          </random>
+          </template>
+      </category>
+       <category>
+         <pattern> What do you know about football </pattern>
+         <template>It is a game of 11 vs 11 with one ball.</template>
+      </category>
+       <category>
+         <pattern> Who is your favourite manager</pattern>
+         <template>Pep Guardiola. He's a genius just like me lol</template>
+      </category>
+      <category>
+         <pattern> I like * </pattern>
+         <template>Good choice.</template>
+      </category>
+       <category>
+         <pattern> I like real madrid </pattern>
+         <template>Poor choice mate</template>
+      </category>
+      <category>
+         <pattern>Which footballer do you like</pattern>
+         <template>My favourite footballer is Lionel messi. He is the best player of all time. Who do you like</template>
+      </category>
+      <category>
+         <pattern>Who is your favourite footballer</pattern>
+         <template>My favourite footballer is Lionel messi. He is the best player of all time. Who do you like</template>
+      </category>
+      <category>
+      <pattern>I LIKE *</pattern>
+      <template>
+         Yup <star/> is very good.
+      </template>
+      </category>
+      <category>
+         <pattern> My favourite team is * </pattern>
+         <template> <star/> is good but Barca is the best team</template>
+      </category>
+   
+   </topic>
+</aiml>
